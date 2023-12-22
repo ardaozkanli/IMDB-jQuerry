@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css" />
+
+    <link rel="icon" href="../../images/favicon.png" />
+    <title>IMDB WEP APP</title>
+  </head>
+  <body>
+    <nav class="navbar text-bg-dark p-3">
+      <form class="container-fluid justify-content-end">
+        <a class="navbar-to-btn log-out-btn" href="../../Auth/Login/login.html">
+          <button class="btn btn-outline-secondary me-2" type="button">
+            Log Out
+          </button>
+        </a>
+        <a class="navbar-to-btn" href="../movies.html">
+          <button
+            class="btn btn-outline-secondary me-2 add-movie-btn"
+            type="button">
+            Movies
+          </button>
+        </a>
+      </form>
+    </nav>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-6 mx-auto">
+          <div class="bg-light p-3 rounded">
+            <form class="user-authentication form-container">
+              <!-- Group 1: Certificate, Directors, Genre -->
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputCertificate">Certificate</label>
+                    <select
+                      class="form-select"
+                      id="exampleInputCertificate"
+                      aria-label="Default select example"></select>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputDirectors">Directors</label>
+                    <select
+                      class="form-select"
+                      id="exampleInputDirectors"
+                      aria-label="Default select example"></select>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputGenre">Genre</label>
+                    <select
+                      class="form-select"
+                      id="exampleInputGenre"
+                      aria-label="Default select example"
+                      multiple="multiple"></select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Group 2: Gross, IMDB_Rating, Meta_score -->
+              <div class="add-movie-form row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputGross">Gross</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="exampleInputGross" />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputRating">IMDB_Rating</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="exampleInputRating"
+                      step="0.1" />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputScore">Meta_score</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="exampleInputScore" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Group 3: No_of_votes, Poster_Link, Released_Year -->
+              <div class="add-movie-form row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputVote">No_of_Votes</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="exampleInputVote" />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputPosterLink">Poster_Link</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="exampleInputPosterLink" />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputReleased">Released_Year</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="exampleInputReleased" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Group 4: Runtime, Series_Title, Stars-->
+              <div class="add-movie-form row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputTime">Runtime</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="exampleInputTime" />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputTitle">Series_Title</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="exampleInputTitle" />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="exampleInputStarName">Stars</label>
+                      <select
+                        class="form-select"
+                        id="exampleInputStarName"
+                        multiple="multiple"></select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Group 5: Overview -->
+              <div class="add-movie-form row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputOverview">Overview</label>
+                    <textarea
+                      type="text"
+                      class="form-control"
+                      id="exampleInputOverview">
+                    </textarea>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <button
+                type="submit"
+                class="btn mt-2 btn-outline-secondary submit-btn post-add-btn">
+                Edit Movie
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script
+      src="../Edit_Movies/editmovie.js"
+      type="module"
+      defer="true"></script>
+  </body>
+</html>
